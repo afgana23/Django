@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: rgba(202, 207, 209, 0.9);
+        }
+        
+          .box {
+            width: 500px;
+            background: #fafafa;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 2px 2px 20px 5px rgba(0,0,0,0.5);
+        
+          }
+          h1 {
+            color: rgba(23, 218, 55, 0.842);
+            font-weight: bold;
+            font-size: 36px;
+            padding: 30px 0;
+            
+          }
+          .inputage {
+            background: #fff;
+            box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+        .inputage label {
+           
+            font-size: 18px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .inputage input {
+            outline: none;
+            border: none;
+            border-bottom: 2px solid #dc2121;
+            width: 50%;
+            text-align: center;
+            font-size: 21px;
+            font-family: "Nunito", sans-serif;
+        }
+        .inputgender{
+            background: #fff;
+            box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            margin-bottom: 10px;
+      
+
+        }
+        .inputgender input{
+            outline: none;
+            border: none;
+            border-bottom: 2px solid #dc2121;
+          width: 10%;
+          
+            font-size: 18px;
+            font-family: "Nunito", sans-serif;
+
+        }
+        .inputgender label{
+         
+            font-size: 21px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 20px;
+
+        }
+        .inputweight {
+            background: #fff;
+            box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+    
+    
+        .inputweight label {
+          
+            font-size: 18px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 20px;
+        }
+       .inputweight input {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #df0f5f;
+            width: 50%;
+            text-align: center;
+            font-size: 28px;
+            font-family: "Nunito", sans-serif;
+        }
+    
+        .inputheight {
+            background: #fff;
+            box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+    
+    
+        .inputheight label {
+         
+            font-size: 18px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 20px;
+        }
+       .inputheight input {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #b33b16;
+            width: 50%;
+            text-align: center;
+            font-size: 28px;
+            font-family: "Nunito", sans-serif;
+        }
+         
+button.calculate {
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    background: rgb(221, 130, 69);
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 50%;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+  }
+  button.calculate:hover {
+    background: #c11215;
+  }
+
+  
+  
+.result {
+    padding: 10px 20px;
+  }
+  .result p {
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 15px;
+  }
+  .result #result {
+    font-size: 36px;
+    font-weight: 900;
+    color: #29730a;
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+  }
+  #comment {
+    color: #154105;
+    font-weight: 800;
+  }
+
+.comment {
+    display: none;
+    border: dashed 1px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 300px;
+  
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #6fa3c9;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #0e4acb;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: #000000 -1px 2px 2px 1px;
+  }
+  
+  #modalText {
+    padding-top: 8px;
+    padding-right: 5px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(207, 21, 21);
+  }
+  
+  .modal-wrong {
+  border: 2px solid red;
+  }
+  
+  .modal-correct {
+    border: 2px solid green;
+    }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .close:hover {
+    color: #d41111; 
+  }
+  
+  
+  
+  @media (max-width: 700px){
+  
+  
+      .box {
+          width: 380px;
+      }
+  
+  
+  
+      
+      .inputage label {
+  
+          font-size: 18px;
+      }
+  
+      .inputheight label, .inputweight label {
+          font-size: 14px;
+      }
+  
+  
+      .inputage input, .inputheight input, .inputweight input{
+          font-size: 24px;
+      }
+  
+  
+      .modal-content {
+  
+        width: 420px;
+      }
+  
+  
+  
+  }
+
+    
+      
+    
+    
+        
